@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 25px;
+    width: 100vw;
+}
+a {
+    text-decoration: none;
+    color:rgb(31, 212, 212);
+}
+main > #input-el {
+    padding: 10px;
+    width: 500px;
+    height: 11px;
+    border: 2px solid rgb(0, 0, 0);
+}
+main > #input-btn {
+    width: 100px;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: rgb(31, 212, 212);
+    height: 35px;
+}
+main > #input-list{
+    padding: 0;
+}
+main > #input-list > li{
+    margin: 5px 0px;
+    list-style: none;
+}

@@ -4,18 +4,14 @@ let inputSubmit = document.querySelector('#input-btn');
 let refreshSubmit = document.querySelector('#refresh-btn');
 let inputList = document.querySelector('#input-list')
 
-inputSubmit.addEventListener("click", function(e){
-    if (inputBox.value){
-        if(listOfTxt.length == 10){listOfTxt.shift()}
-        listOfTxt.push(inputBox.value);
-        localStorage.setItem("saveExList", JSON.stringify(listOfTxt));
-        listOfTxt = JSON.parse(localStorage.getItem("saveExList"));
-        inputList.innerHTML = "";
-        addText(listOfTxt);
-        inputBox.value = "";
-        
+inputBox.addEventListener("keypress", function(e){
+    if (e.key == "Enter"){
+        runMain();
     }
+})
 
+inputSubmit.addEventListener("click", function(e){
+    runMain();
 })
 
 refreshSubmit.addEventListener("click", function(e){
@@ -33,5 +29,17 @@ function addText(listOfTxt){
         }else{
             inputList.innerHTML += "<li>"+listOfTxt[i]+"</li>"
         }
+    }
+}
+
+function runMain(){
+    if (inputBox.value){
+        if(listOfTxt.length == 10){listOfTxt.shift()}
+        listOfTxt.push(inputBox.value);
+        localStorage.setItem("saveExList", JSON.stringify(listOfTxt));
+        listOfTxt = JSON.parse(localStorage.getItem("saveExList"));
+        inputList.innerHTML = "";
+        addText(listOfTxt);
+        inputBox.value = "";
     }
 }

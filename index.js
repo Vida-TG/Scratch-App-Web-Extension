@@ -23,11 +23,11 @@ refreshSubmit.addEventListener("click", function(e){
 function addText(listOfTxt){
     for(let i=0; i<(listOfTxt.length); i++){
         if((listOfTxt[i].startsWith("https://"))){
-            inputList.innerHTML += "<li><a href='"+listOfTxt[i]+"' target='_blank'>"+listOfTxt[i]+"</a></li>"
+            inputList.innerHTML += `<li><a href='${listOfTxt[i]}' target='_blank'>${listOfTxt[i]}</a></li>`;
         }else if((listOfTxt[i].startsWith("www."))){
-            inputList.innerHTML += "<li><a href='https://"+listOfTxt[i]+"' target='_blank'>"+listOfTxt[i]+"</a></li>"
+            inputList.innerHTML += `<li><a href='https://${listOfTxt[i]}' target='_blank'>${listOfTxt[i]}</a></li>`;
         }else{
-            inputList.innerHTML += "<li>"+listOfTxt[i]+"</li>"
+            inputList.innerHTML += `<li> ${listOfTxt[i]} </li>`;
         }
     }
 }

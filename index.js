@@ -73,6 +73,6 @@ window.addEventListener("load", function(){
 urlBtn.addEventListener("click", function(){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         let url = tabs[0].url;
-        alert(url);
+        setItemToSave(url);
     });
 });

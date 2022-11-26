@@ -20,11 +20,6 @@ refreshSubmit.addEventListener("click", function(e){
     runRefresh();
 })
 
-urlBtn.addEventListener("click", function(e){
-    let urlOnTab = window.location.toString();
-    setItemToSave(urlOnTab);
-})
-
 function addText(listOfTxt){
     for(let i=0; i<(listOfTxt.length); i++){
         if((listOfTxt[i].startsWith("https://"))){
@@ -46,6 +41,9 @@ function runMain(){
 }
 
 function setItemToSave(item){
+    if(!listOfTxt){
+        listOfTxt = [];
+    }
     if(listOfTxt.length == 10){listOfTxt.shift()}
     listOfTxt.push(item);
     localStorage.setItem("saveExList", JSON.stringify(listOfTxt));
@@ -69,3 +67,12 @@ clrSubmit.addEventListener('dblclick', function(e){
 window.addEventListener("load", function(){
     runRefresh();
 })
+
+
+
+urlBtn.addEventListener("click", function(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        let url = tabs[0].url;
+        alert(url);
+    });
+});

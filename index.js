@@ -1,7 +1,6 @@
 let listOfTxt = [];
 let inputBox = document.querySelector('#input-el');
 let inputSubmit = document.querySelector('#input-btn');
-let refreshSubmit = document.querySelector('#refresh-btn');
 let inputList = document.querySelector('#input-list');
 let clrSubmit = document.querySelector('#clr-btn');
 let urlBtn = document.querySelector('#url-btn');
@@ -14,10 +13,6 @@ inputBox.addEventListener("keypress", function(e){
 
 inputSubmit.addEventListener("click", function(e){
     runMain();
-})
-
-refreshSubmit.addEventListener("click", function(e){
-    runRefresh();
 })
 
 function addText(listOfTxt){
@@ -67,8 +62,6 @@ clrSubmit.addEventListener('dblclick', function(e){
 window.addEventListener("load", function(){
     runRefresh();
 })
-
-
 
 urlBtn.addEventListener("click", function(){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {

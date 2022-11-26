@@ -1,26 +1,47 @@
-body {
+main {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 25px;
-    width: 100vw;
+    padding: 25px !important;
+    width: 340px;
 }
 a {
     text-decoration: none;
     color:rgb(31, 212, 212);
 }
 main > #input-el {
-    padding: 10px;
-    width: 500px;
+    padding: 15px;
+    width: 300px;
     height: 11px;
     border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 15px;
 }
 main > #input-btn {
     width: 100px;
+    margin-right: 13px;
     color: rgb(0, 0, 0);
     border: none;
     font-weight: bold;
     font-family: monospace;
     background-color: rgb(31, 212, 212);
+    height: 35px;
+}
+main > #url-btn{
+    width: 100px;
+    margin-right: 14px;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: rgb(20, 160, 220);
+    height: 35px;
+}
+main > #clr-btn{
+    width: 100px;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: rgb(219, 84, 7);
     height: 35px;
 }
 main > #input-list{

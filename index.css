@@ -51,6 +51,6 @@ main > #input-list{
     padding: 0;
 }
 main > #input-list > li{
-    margin: 5px 0px;
+    margin: 4px 5px 20px 0px;
     list-style: none;
 }
